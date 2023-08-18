@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  # Django app
+  web:
+    build: .
+    image: weather_app
+    container_name: weather_app
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - LAT=xxx
+      - LON=xxx
+      - APP_ID=xxx
+    working_dir: /app
+    ports:
+      - "8000:8000"
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    depends_on:
+      - redis
+
+  # Redis server
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
