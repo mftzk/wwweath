@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-alry%+_@!18ed%n0o$qsss!$+8lacqaq*^974_&5k0rxm4oeb5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["pojokdesa.muftizakaria.com"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
