@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <style>    
-    table, th, td {
-        border: 1px solid white;
-        border-collapse: collapse;
-        padding: 15px;
-    }
-    th, td {
-        background-color: #96D4D4;
-    }
-    </style>
-</head>
-<body>
+{% extends "master.html" %}
+
+{% block title %}
+  Weather {{ city }}
+{% endblock %}
+
+
+{% block content %}
+
 <h1> Weather {{ city }}</h1>
 <p>
     <table>
@@ -38,5 +32,4 @@
     </tr>
     </table>
 </p>
-</body>
-</html>
+{% endblock %}

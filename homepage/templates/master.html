@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <style>   
+    .content {
+        max-width: 500px;
+        margin: auto;
+    }
+    table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+        padding: 15px;
+    }
+    th, td {
+        background-color: #96D4D4;
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="content">
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
