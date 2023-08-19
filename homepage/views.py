@@ -29,3 +29,9 @@ def homepage(request):
     }
 
     return HttpResponse(template.render(context, request))
+
+def desa(request):
+   
+   template = loader.get_template('desa.html')
+
+   return HttpResponse(template.render())
